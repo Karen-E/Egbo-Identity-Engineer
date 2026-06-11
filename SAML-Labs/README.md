@@ -14,3 +14,8 @@ Hands‑on SAML exercises demonstrating identity federation, authentication flow
 - Troubleshooting SSO failures  
 - Mapping attributes and claims  
 - Analyzing logs and error codes  
+
+
+## SAML Authentication Flow Diagram
+
+![SAML Authentication Flow](./saml-auth-flow.png)
