@@ -18,4 +18,5 @@ Hands‑on SAML exercises demonstrating identity federation, authentication flow
 
 ## SAML Authentication Flow Diagram
 
-![SAML Authentication Flow](./saml-auth-flow.png)
+![SAML Authentication Flow](./SAML%20Authentication%20Flow%20diagram.png)
+
