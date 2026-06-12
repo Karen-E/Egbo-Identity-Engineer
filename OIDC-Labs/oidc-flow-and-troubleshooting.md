@@ -35,8 +35,11 @@ what makes the flow secure.
 ## App Configuration
 
 **App type:** Web Application (OIDC)
+
 **Grant type:** Authorization Code
+
 **Sign-in redirect URI:** https://oidcdebugger.com/debug
+
 **Scopes requested:** openid profile email
 
 ![OIDC app created in Okta](01-oidc-app-created.png)
