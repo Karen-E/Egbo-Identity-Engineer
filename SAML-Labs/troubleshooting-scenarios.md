@@ -5,7 +5,9 @@
 ## Scenario 1: NameID Format Mismatch
 
 **Environment:** Okta Integrator Tenant / Custom SAML App
+
 **Tool used to diagnose:** SAML Tracer (Chrome extension)
+
 **Symptom:** SAML assertion delivered successfully by Okta but
 rejected by the Service Provider due to incorrect NameID format
 
