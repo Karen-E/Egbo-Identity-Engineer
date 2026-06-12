@@ -6,18 +6,16 @@ authorization — built using a live Okta environment.
 ---
 
 ## What's in this folder
-- [OIDC Authentication Flow diagram](OIDC-Authentication-Flow-diagram.png)
-  — end-to-end visual of the OIDC flow from login request to 
-  token validation
-- [oidc-app-integration-walkthrough.md](oidc-app-integration-walkthrough.md)
-  — step-by-step guide to configuring an OIDC app integration 
-  in Okta with screenshots and architecture notes
+- [oidc-flow-and-troubleshooting.md](oidc-flow-and-troubleshooting.md)
+  — complete OIDC authorization code flow walkthrough with three
+  real errors diagnosed and resolved using Okta System Log and
+  policy configuration
 
-*The following documents are in progress and will be added as 
+*The following documents are in progress and will be added as
 the lab expands:*
+- OIDC Authentication Flow diagram
 - Token inspection and claims analysis
 - OIDC vs SAML comparison guide
-- Troubleshooting scenarios
 
 ---
 
