@@ -6,8 +6,10 @@ a live Okta environment.
 ---
 
 ## What's in this folder
-*This lab is in progress. Files will be added as each exercise
-is completed.*
+- [scim-provisioning-setup.md](scim-provisioning-setup.md)
+  — SCIM provisioning configuration walkthrough with two real
+  connection errors diagnosed: SSL certificate validation and
+  SCIM schema non-compliance
 
 ---
 
