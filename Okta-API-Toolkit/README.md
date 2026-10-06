@@ -5,8 +5,7 @@ A set of Python scripts that interact directly with the Okta API to perform core
 
 ## What's in this folder
 - `list_users.py` — retrieves and prints all users in the Okta tenant via the `/api/v1/users` endpoint
-<!-- add a line for each additional script as it's completed, e.g.: -->
-<!-- - `create_user.py` — creates a new user via the Okta API -->
+- [list-users-walkthrough.md](list-users-walkthrough.md) — technical walkthrough of how list_users.py works, including environment loading, header construction, and response handling
 
 ## Skills demonstrated
 - Authenticating to the Okta API using a bearer-style token (`SSWS` scheme) via custom HTTP headers
