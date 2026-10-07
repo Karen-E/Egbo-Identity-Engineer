@@ -6,6 +6,8 @@ A set of Python scripts that interact directly with the Okta API to perform core
 ## What's in this folder
 - `list_users.py` — retrieves and prints all users in the Okta tenant via the `/api/v1/users` endpoint
 - [list-users-walkthrough.md](list-users-walkthrough.md) — technical walkthrough of how list_users.py works, including environment loading, header construction, and response handling
+- `create_user.py` — creates a new user in the Okta tenant via the `/api/v1/users` endpoint
+- [create-user-walkthrough.md](create-user-walkthrough.md) — technical walkthrough of how create_user.py works, including the nested profile dictionary, POST vs. GET, and status code handling
 
 ## Skills demonstrated
 - Authenticating to the Okta API using a bearer-style token (`SSWS` scheme) via custom HTTP headers
@@ -13,6 +15,9 @@ A set of Python scripts that interact directly with the Okta API to perform core
 - Making HTTP GET requests with the Python `requests` library and handling JSON responses
 - Reading and interpreting Okta API error responses (status codes, error codes, error summaries)
 - Real-world environment troubleshooting: resolving Python environment/interpreter mismatches, malformed URL construction, and expired API token rotation
+- Sending data to an API via HTTP POST requests, including correctly formatted JSON request bodies
+- Structuring nested data (Python dictionaries) to match an API's required schema
+- Distinguishing between HTTP status codes (200 vs. 201) based on the nature of the request
 
 ## Why I built this
 <!-- your own words -->
