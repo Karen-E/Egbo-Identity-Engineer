@@ -43,3 +43,10 @@ The script was extended from creating one hardcoded user to creating several in 
 **Bug caught during review:** The first version passed the entire list to the request (`json=three_members`) instead of the current user (`json=user`). Okta expects a single `{"profile": {...}}` object per request, so sending the whole list would have been the wrong shape, and the loop would have repeated the same bundled request each pass. Changing it to `json=user` sends one user per request.
 
 **Result:** All three test users were created successfully, confirmed in both the terminal output and the Okta Admin Console.
+
+
+**Duplicate-run test:** Running the script a second time returned `400 Bad Request` for all three users, with the message `login: An object with this field already exists in the current organization`. Okta accepted the request and authenticated the token, but rejected each one because logins must be unique within the tenant. This differs from the earlier `401` (Okta didn't accept the credentials) in that the problem here was the request's data, not authentication.
+
+Because the `else` branch only prints the error and has no `break`, the loop continued through all three users. This is usually the right behavior for batch jobs, since one failure shouldn't block the rest.
+
+**Known limitation:** The error output does not identify which user failed. Printing the user's email in the `else` branch would fix this.
