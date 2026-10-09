@@ -30,3 +30,16 @@ Since this script sends data to Okta rather than only retrieving it, two things 
 Okta's create-user endpoint returns `201 Created` on success — the standard HTTP code for a resource being created — rather than the generic `200 OK` returned by read-only `GET` requests. The script checks for either code to correctly detect success.
 
 **Result:** the script ran successfully on the first attempt, creating a new user with status `PROVISIONED` — the expected initial state for an API-created user who hasn't yet completed first login.
+
+
+## Update: creating multiple users
+
+The script was extended from creating one hardcoded user to creating several in a single run.
+
+**Data structure:** The single user dictionary was replaced with a list of dictionaries. Square brackets form the list, and each user's nested `profile` dictionary sits in its own curly braces, separated by commas.
+
+**Looping:** A `for` loop now iterates through the list. The `url` and `headers` are built once before the loop since they are identical for every request. The `requests.post()` call and the status-code check sit inside the loop, because Okta's create endpoint accepts one user per request.
+
+**Bug caught during review:** The first version passed the entire list to the request (`json=three_members`) instead of the current user (`json=user`). Okta expects a single `{"profile": {...}}` object per request, so sending the whole list would have been the wrong shape, and the loop would have repeated the same bundled request each pass. Changing it to `json=user` sends one user per request.
+
+**Result:** All three test users were created successfully, confirmed in both the terminal output and the Okta Admin Console.
