@@ -8,6 +8,8 @@ A set of Python scripts that interact directly with the Okta API to perform core
 - [list-users-walkthrough.md](list-users-walkthrough.md) — technical walkthrough of how list_users.py works, including environment loading, header construction, and response handling
 - `create_user.py` — creates one or more users in the Okta tenant via the `/api/v1/users` endpoint
 - [create-user-walkthrough.md](create-user-walkthrough.md) — technical walkthrough of how create_user.py works, including the nested profile dictionary, POST vs. GET, and status code handling
+- `deactivate_user.py` — looks up users by email and deactivates them via the Okta lifecycle API
+- [deactivate-user-walkthrough.md](deactivate-user-walkthrough.md) — technical walkthrough of the two-step lookup-then-deactivate flow and its status checks
 
 ## Skills demonstrated
 - Authenticating to the Okta API using a bearer-style token (`SSWS` scheme) via custom HTTP headers
@@ -19,6 +21,9 @@ A set of Python scripts that interact directly with the Okta API to perform core
 - Structuring nested data (Python dictionaries) to match an API's required schema
 - Distinguishing between HTTP status codes (200 vs. 201) based on the nature of the request
 - Iterating over a list of dictionaries with a for loop to perform batch API operations
+- Chaining dependent API requests, using data from one response to build the next request
+- Performing user lifecycle operations (deactivation) via the Okta API
+- Validating each API response with status checks, so the script never reports success it hasn't confirmed
 
 ## Why I built this
 <!-- your own words -->
