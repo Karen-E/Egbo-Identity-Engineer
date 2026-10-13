@@ -24,3 +24,6 @@ Failures print the email, the status code, and Okta's response text, so it's cle
 **Scope and safety:** Deactivation was treated as irreversible on this tenant, based on earlier testing. The script was therefore built in two stages, with the lookup tested alone first and the deactivate step added only after the lookup was confirmed to find the right users. Only disposable test users were targeted.
 
 **Result:** Two test users were deactivated. The result was confirmed in the terminal output and in the Okta Admin Console, and the other test users were unchanged.
+![Users before deactivation](11a-deactivate-users-okta-before.png)
+
+![Users after deactivation](11b-deactivate-users-okta-after.png)
